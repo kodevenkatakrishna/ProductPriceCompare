@@ -48,7 +48,7 @@ public class Login_Flipkart {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div/input[@class='Pke_EE']")));
 		driver.findElement(Search).click();
 		Thread.sleep(10000);
-		driver.findElement(Search).sendKeys("iphone 13");
+		driver.findElement(Search).sendKeys("motorola g35");
 	}
 	
 	public void Retreving_Products_From_SearcSuggestions() {
@@ -72,7 +72,7 @@ public class Login_Flipkart {
 		for(int i=0;i<El.size();i++)
 		{
 			
-			if(El.get(i).getText().contains("iphone 13"))
+			if(El.get(i).getText().contains("motorola g35"))
 			{
 				El.get(i).click();
 				break;
@@ -101,7 +101,7 @@ public class Login_Flipkart {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		for(int j=0;j<El1.size();j++)
 		{
-			if(El1.get(j).getText().contains("Apple iPhone 13 (Blue, 256 GB)"))
+			if(El1.get(j).getText().contains("Motorola G35 5G (Leaf Green"))
 			{
 				El1.get(j).click();
 				System.out.println(" ");

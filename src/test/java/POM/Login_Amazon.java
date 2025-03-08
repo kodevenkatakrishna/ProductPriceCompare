@@ -25,7 +25,7 @@ public class Login_Amazon {
 	}
 	
 	By Search = By.xpath("//input[@id='twotabsearchtextbox']");
-	By SearchList = By.xpath("//div[@role='button']");
+	By SearchList = By.xpath("//div[@role='rowgroup']//span");
 	By SearchedList = By.xpath("//div[@class='s-main-slot s-result-list s-search-results sg-row']/div[@data-component-type=\"s-search-result\"]//span[@class='a-size-medium a-color-base a-text-normal']");
 	By Price = By.xpath("//span[@id='tp_price_block_total_price_ww']//span[@class='a-offscreen']");
 	
@@ -41,7 +41,7 @@ public class Login_Amazon {
 	}
 	
 	public void ProductName() {
-		driver.findElement(Search).sendKeys("iphone 13");
+		driver.findElement(Search).sendKeys("motorola g35");
 	}
 	
 	public void Retreving_From_SearcSuggestions() throws InterruptedException {
@@ -64,7 +64,7 @@ public class Login_Amazon {
 	public void Selecting_a_Product_from_SuggestionList() {	
         for(int I=0;I<E.size();I++) {
         	String S = E.get(I).getText();
-        	if(S.contains("iphone 13 256gb"))
+        	if(S.contains("motorola g35"))
         	{
         		E.get(I).click();
         		break;
@@ -88,7 +88,7 @@ public class Login_Amazon {
 	public void Selecting_product_from_searchResults() {	
 		for(int J=0;J<E1.size();J++) {
 			
-			if(E1.get(J).getText().contains("Apple iPhone 13 (256GB) - Blue"))
+			if(E1.get(J).getText().contains("Motorola G35 5G (Leaf Green"))
 			{
 				E1.get(J).click();
 				System.out.println(" ");
